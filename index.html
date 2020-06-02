@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+  <div class="container-fluid">
+      <div class="row">
+     <div class="col-md-4" style="position: relative; left: 0; top: 0;">
+         <img src="woman.png" height="740px" width="360px" alt="" class="woman">    
+
+     </div>
+     <div class="col-md-8">
+         <div class="row">
+             <small>Date:<span id="datetime"></span></small>
+         </div>
+         <div class="row justify-content-center">
+            <img src="logo1.png" height="112px" width="" alt="">
+         </div>
+         <div class="row">
+         <div class="col-md-4">
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+           <label for="firstName">First Name</label><br>
+           <input class="input" type="text" name="fname"><br><br>
+           <label for="phoneNumber">Phone Number</label><br>
+           <input class="input"  type="text" name="phnum" placeholder="+91"><br><br>
+           <label for="password">Password</label><br>
+           <input class="input"  type="password" name="pass"><br><br>
+           <label for="location">Location</label><br>
+           <input class="input"  type="text" name="location"><br><br>
+           <div class="wrapper">
+               <!-- <div class="upload-console">
+                   <h6 class="upload-console-header">Upload</h6>
+                   <div class="upload-console-body">
+                       <h6>Select files from your computer</h6> -->
+                           
+                               <input type="file" name="files[]" id="standard-upload-files" >
+                               <input type="submit" value="Upload Files" id="standard-upload"> 
+                            <!-- <h6>Or drag and drop files below</h6> -->
+                            <div class="upload-console-drop" id="drop-zone">
+                                Just drag and drop files here
+                            </div>
+                            <div class="bar">
+                                <div class="bar-fill" id="bar-fill"> 
+                                    <div class="bar-fill-text" id="bar-fill-text">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- class="hidden"  -->
+                            <div id="uploads-finished" class="hidden">
+                                <h6>Processed files</h6>
+                                <div class="upload-console-upload">
+                                    <a href="#">filename.jpg</a>
+                                    <span>Success</span>
+                                </div>
+                            </div>
+                            </form>
+                       </h3>
+                   </div>
+               </div>
+           <!-- </div> -->
+         <!-- </div> -->
+         <div class="col-md-4">
+            <label for="lastName">Last Name</label><br>
+            <input class="input"  type="text" name="lname"><br><br>
+            <label for="email">Email</label><br>
+            <input class="input"  type="text" name="email"><br><br>
+            <label for="career">Career</label><br>
+            <select class="input"  name="career" >
+                <option value="model">Model</option>
+                <option value="fashionDesigner">Fashion Designer</option>
+                <option value="brands">Brands</option>
+                <option value="stylist">Stylist</option>
+                <option value="events">Events</option>
+                <option value="hmua">HMUA</option>
+                <option value="photographers">Photographers</option>
+                <option value="others">Others</option>
+              </select><br><br>
+            <label for="dob">Date Of Birth</label><br>
+            <input class="input"  type="date" name="dob"><br>
+            <br><br><br><br><br><br>
+            <small>We will not use any of your data for our promotion or commercial purpose without any permission</small>
+            <br>
+            <button class="colour">Create Account</button>
+         </div>
+        </form>
+        </div>
+    </div>
+     </div>
+  </div>  
+</body>
+<script src="js/global.js"></script>
+</html>
